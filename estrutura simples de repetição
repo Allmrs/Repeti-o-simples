@@ -1,0 +1,25 @@
+void main() {
+Exercicios exercicio = Exercicios();
+  exercicio.ex1(2000.00);
+}
+
+class Exercicios {
+   void ex1(double salario){
+     double aumento = 0.0;
+     
+     if(salario <=280.00){
+       aumento = 0.2;   
+     }else if(salario > 280 && salario <= 700){
+       aumento = 0.15;
+     }else if(salario > 700 && salario <= 1500){
+       aumento = 0.1;
+     }else{
+       aumento = 0.05;
+     }
+     
+     print('salario anterior: R\$ $salario');
+     print('percentual de aumento: ${aumento * 100}%');
+     print('valor do aumento no salário: R\$ ${salario * aumento}');
+     print('novo valor do salário: R\$ ${salario + (salario * aumento)}');
+   }
+ }
